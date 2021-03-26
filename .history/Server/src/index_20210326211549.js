@@ -43,7 +43,7 @@ import productRouter from "./api/Routers/products/Product";
     app.use("/product", productRouter);
 
     app.listen(Port, () =>
-      console.log(`🚀 Server ready at http://localhost:${Port}`)
+      console.log(`🚀 Server ready at http://localhost${Port}`)
     );
   } catch (error) {
     console.error(error);

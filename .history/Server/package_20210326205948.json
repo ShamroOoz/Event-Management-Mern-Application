@@ -4,8 +4,8 @@
   "description": "express app with babel es6",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon --exec babel-node  src/index.js",
     "build": "node src/index",
-    "server": "nodemon --exec babel-node  src/index.js",
     "client": "npm start --prefix ../client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
@@ -23,10 +23,9 @@
   },
   "dependencies": {
     "apollo-server": "^2.19.1",
-    "apollo-server-express": "^2.19.2",
-    "concurrently": "^6.0.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
+    "apollo-server-express": "^2.19.2",
     "graphql": "^15.4.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.9"

@@ -2,19 +2,18 @@ import express from "express";
 import { dbconnection } from "./api/Helper/db";
 import cors from "cors";
 import morgan from "morgan";
-import { PORT, NODE_ENV } from "../config";
 //routers import
 import mainRouter from "./api/Routers";
 import userRouter from "./api/Routers/user";
 import usersRouter from "./api/Routers/user/User";
 import productRouter from "./api/Routers/products/Product";
+import { PORT, NODE_ENV } from "../config";
 
 (async () => {
   try {
     //DB Connection
     await dbconnection();
     console.log("Connected to database");
-
     //Init Express App
     const app = express();
 
@@ -43,7 +42,7 @@ import productRouter from "./api/Routers/products/Product";
     app.use("/product", productRouter);
 
     app.listen(Port, () =>
-      console.log(`🚀 Server ready at http://localhost:${Port}`)
+      console.log(`🚀 Server ready at http://localhost${Port}`)
     );
   } catch (error) {
     console.error(error);
