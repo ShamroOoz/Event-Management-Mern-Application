@@ -4,11 +4,8 @@
   "description": "express app with babel es6",
   "main": "index.js",
   "scripts": {
-    "build": "node src/index",
     "server": "nodemon --exec babel-node  src/index.js",
-    "client": "npm start --prefix ../client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-prebuild": "npm install --only=dev",
+    "heroku-postbuild": "npm install",
     "start": "babel-node src/index.js"
   },
   "keywords": [],

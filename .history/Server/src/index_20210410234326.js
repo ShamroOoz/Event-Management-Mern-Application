@@ -1,16 +1,17 @@
 import express from "express";
-import { dbconnection } from "./api/Helper/db";
 import AuthMiddleware from "./api/Middlewares/is-auth";
 import cors from "cors";
 import morgan from "morgan";
-import { PORT, NODE_ENV } from "../config";
+import { PORT, NODE_ENV, DB_URI, DB_OPTIONS } from "../config";
 //routers import
 import { mainRouter, usersRouter, postRouter } from "./api/Routers";
+import mongoose from "mongoose";
 
 (async () => {
   try {
     //DB Connection
-    await dbconnection().then(() => console.log("Connected to database"));
+    await mongoose.connect(DB_URI, DB_OPTIONS);
+    //await dbconnection().then(() => console.log("Connected to database"));
     //Init Express App
     const app = express();
 

@@ -2,14 +2,10 @@
   "name": "event-mem",
   "version": "1.0.0",
   "description": "express app with babel es6",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "build": "node src/index",
-    "server": "nodemon --exec babel-node  src/index.js",
-    "client": "npm start --prefix ../client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-prebuild": "npm install --only=dev",
-    "start": "babel-node src/index.js"
+    "start": "node src/index"
   },
   "keywords": [],
   "author": "",

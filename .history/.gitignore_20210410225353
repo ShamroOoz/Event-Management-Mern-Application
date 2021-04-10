@@ -5,7 +5,6 @@
 
 # dependencies
 /Client/node_modules
-/Client/build
 /Client/.pnp
 /Client/.pnp.js
 

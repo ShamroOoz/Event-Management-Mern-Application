@@ -6,7 +6,7 @@ import postRouter from "./Posts";
 const mainRouter = Router();
 
 mainRouter.get("/", (req, res, next) => {
-  res.send("Welcome to Home page");
+  res.send("Home page data goes Here");
 });
 
 export { mainRouter, usersRouter, postRouter };

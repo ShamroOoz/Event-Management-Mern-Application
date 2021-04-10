@@ -5,7 +5,12 @@ import cors from "cors";
 import morgan from "morgan";
 import { PORT, NODE_ENV } from "../config";
 //routers import
-import { mainRouter, usersRouter, postRouter } from "./api/Routers";
+import {
+  mainRouter,
+  productRouter,
+  usersRouter,
+  postRouter,
+} from "./api/Routers";
 
 (async () => {
   try {

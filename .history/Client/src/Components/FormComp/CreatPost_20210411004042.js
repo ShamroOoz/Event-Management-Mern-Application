@@ -26,10 +26,17 @@ const CreatPost = ({ updatepostId, setupdatepostId }) => {
   const onSubmit = async (values, onSubmitProps, event) => {
     try {
       if (!updatepostId || !Updatepost) {
-        dispatch(PostAction.uploadPosts(values));
+        dispatch(
+          PostAction.uploadPosts({ ...values, avatar: values.avatar.base64 })
+        );
         clearListner();
       } else {
-        dispatch(PostAction.updatePost(updatepostId, values));
+        dispatch(
+          PostAction.updatePost(updatepostId, {
+            ...values,
+            avatar: values.avatar.base64,
+          })
+        );
         clearListner();
       }
       onSubmitProps.setSubmitting(false);
