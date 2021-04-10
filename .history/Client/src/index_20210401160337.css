@@ -1,0 +1,44 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-action {
+  @apply block text-lg px-4  ml-2 py-2 rounded text-blue-700 font-bold hover:text-white mt-4 hover:bg-blue-700 md:mt-0;
+}
+
+.btn-search {
+  @apply border-2 border-gray-300  bg-white h-10 pl-2 pr-8 rounded-md text-sm focus:outline-none focus:border-blue-700;
+}
+
+.btn-menu {
+  @apply block md:inline-flex md:mt-0  px-4 py-2 rounded  mr-2 border-b-4 hover:border-green-500 text-center;
+}
+
+.btn-toggle-menu {
+  @apply flex items-center px-3 py-2 border-2  focus:outline-none rounded text-blue-300 border-blue-400 hover:text-blue-400 hover:border-blue-700;
+}
+
+.input-text {
+  @apply text-lg block px-3 py-2 rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md
+                focus:placeholder-blue-700
+                focus:bg-white 
+                focus:border-blue-700  
+                focus:outline-none;
+}
+
+.btn-large {
+  @apply mt-3 text-lg font-semibold focus:outline-none  bg-blue-700 w-full text-white rounded-lg px-6 py-3 block shadow-xl hover:text-white hover:bg-blue-400;
+}
+
+.btn-social {
+  @apply flex items-center justify-center px-4 py-2 space-x-2 transition-colors duration-300 border border-blue-700 rounded-md group hover:bg-blue-500 focus:outline-none;
+}
+
+.drop-down-list {
+  @apply block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900;
+}
+
+.drop-down {
+  @apply origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none;
+}

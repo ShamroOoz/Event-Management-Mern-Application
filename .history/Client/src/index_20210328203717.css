@@ -1,0 +1,16 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-action {
+  @apply block text-lg px-4  ml-2 py-2 rounded text-blue-700 font-bold hover:text-white mt-4 hover:bg-blue-700 md:mt-0;
+}
+
+.btn-search {
+  @apply border-2 border-gray-300  bg-white h-10 pl-2 pr-8 rounded-md text-sm focus:outline-none focus:border-blue-700;
+}
+
+.btn-menu {
+  @apply block mt-4 md:inline-block md:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2;
+}
